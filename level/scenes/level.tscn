@@ -4,11 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://cffjduipbb3s5" path="res://level/scenes/player.tscn" id="1_uvcbi"]
 [ext_resource type="FontFile" uid="uid://c4ukcobr8mrf1" path="res://assets/fonts/StackSansText-Regular.ttf" id="3_cwx4m"]
 [ext_resource type="FontFile" uid="uid://diapabmalpcrj" path="res://assets/fonts/Kurland.ttf" id="3_icc4p"]
-[ext_resource type="PackedScene" uid="uid://behfowafe22cc" path="res://assets/env/game-pirate-adventure-map/source/ÐÂ½¨ÎÄ¼þ¼Ð/11.FBX" id="3_xerh7"]
 [ext_resource type="FontFile" uid="uid://cwqf0eqq1v8qq" path="res://assets/fonts/StackSansText-Light.ttf" id="4_xerh7"]
 
 [sub_resource type="Environment" id="Environment_qb4jd"]
 fog_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_cwx4m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xerh7"]
 
@@ -19,7 +20,6 @@ base_font = ExtResource("3_cwx4m")
 color = Color(0, 0, 0, 0)
 
 [node name="Level" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1492782, -0.036193848)
 script = ExtResource("1_e1sh7")
 player_scene = ExtResource("1_uvcbi")
 
@@ -34,14 +34,14 @@ shadow_enabled = true
 shadow_blur = 0.5
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 45.30375, -137.7927)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D"]
+transform = Transform3D(19.546644, 0, 0, 0, 1, 0, 0, 0, 20.376293, 0, 0, 0)
+mesh = SubResource("BoxMesh_cwx4m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/StaticBody3D"]
-transform = Transform3D(70.77242, 0, 0, 0, 1, 0, 0, 0, 321.45328, 0.57144356, 15.964157, 146.27704)
+transform = Transform3D(19.844568, 0, 0, 0, 1, 0, 0, 0, 23.582634, 0, 0, 0)
 shape = SubResource("BoxShape3D_xerh7")
-
-[node name="11" parent="Environment" instance=ExtResource("3_xerh7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2388268, 61.87979, -157.34094)
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
@@ -263,7 +263,7 @@ vertical_alignment = 1
 uppercase = true
 
 [node name="PlayersContainer" type="Node3D" parent="."]
-transform = Transform3D(0.9996592, 0, -0.026107252, 0, 1, 0, 0.026107252, 0, 0.9996592, 7.2593236, 71.35725, -138.08464)
+transform = Transform3D(0.9996592, 0, -0.026107252, 0, 1, 0, 0.026107252, 0, 0.9996592, -1.194706, 8.312319, 1.3780854)
 
 [node name="GameControls" type="Control" parent="."]
 layout_mode = 3

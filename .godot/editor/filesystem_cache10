@@ -1,6 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763115872
+::res://::1763129453
 icon.png::CompressedTexture2D::3781522302752179885::1762774444::1762865035::1::::<><><>0<>0<>6535cef6fdb125f279e1474450ffd62d<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+README.md::TextFile::-1::1763125737::0::1::::<><><>0<>0<><>::
 ::res://addons/::1762911049
 ::res://addons/zylann.hterrain/::1762911055
 hterrain.gd::GDScript::3790504010119104717::1762911050::0::1::::<>Node3D<><>0<>1<><>::

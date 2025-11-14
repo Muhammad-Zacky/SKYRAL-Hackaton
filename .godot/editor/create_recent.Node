@@ -1,5 +1,5 @@
-AnimationPlayer
 CollisionShape3D
-StaticBody3D
 MeshInstance3D
+StaticBody3D
+AnimationPlayer
 HTerrain
